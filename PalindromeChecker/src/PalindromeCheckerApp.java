@@ -1,24 +1,24 @@
+// UC2: Print a Hardcoded Palindrome Result
 
 public class PalindromeCheckerApp {
 
-
     public static void main(String[] args) {
 
+        // Hardcoded string
+        String word = "madam";
 
-        System.out.println("=======================================");
-        System.out.println("        Welcome to Palindrome          ");
-        System.out.println("            Checker App                ");
-        System.out.println("=======================================");
+        // Reverse the string
+        String reversed = "";
 
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed = reversed + word.charAt(i);
+        }
 
-
-        System.out.println("Application Name : Palindrome Checker App");
-        System.out.println("Application Version : 1.0");
-
-
-        System.out.println("---------------------------------------");
-        System.out.println("Application started successfully.");
-        System.out.println("Proceeding to the next use case...");
-        System.out.println("---------------------------------------");
+        // Check if palindrome
+        if (word.equals(reversed)) {
+            System.out.println("The word '" + word + "' is a Palindrome.");
+        } else {
+            System.out.println("The word '" + word + "' is NOT a Palindrome.");
+        }
     }
 }
