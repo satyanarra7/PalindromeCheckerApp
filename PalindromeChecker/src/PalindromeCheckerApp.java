@@ -1,3 +1,4 @@
+
 // UC4: Character Array Based Palindrome Check
 
 public class PalindromeCheckerApp {
@@ -32,3 +33,4 @@ public class PalindromeCheckerApp {
             System.out.println("The string \"" + text + "\" is NOT a Palindrome.");
         }
     }
+}
