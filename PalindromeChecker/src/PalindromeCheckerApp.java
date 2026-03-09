@@ -1,24 +1,34 @@
-// UC2: Print a Hardcoded Palindrome Result
+// UC4: Character Array Based Palindrome Check
 
 public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        // Hardcoded string
-        String word = "madam";
+        // Original string
+        String text = "madam";
 
-        // Reverse the string
-        String reversed = "";
+        // Convert string to character array
+        char[] charArray = text.toCharArray();
 
-        for (int i = word.length() - 1; i >= 0; i--) {
-            reversed = reversed + word.charAt(i);
+        // Two-pointer approach
+        int start = 0;
+        int end = charArray.length - 1;
+
+        boolean isPalindrome = true;
+
+        while (start < end) {
+            if (charArray[start] != charArray[end]) {
+                isPalindrome = false;
+                break;
+            }
+            start++;
+            end--;
         }
 
-        // Check if palindrome
-        if (word.equals(reversed)) {
-            System.out.println("The word '" + word + "' is a Palindrome.");
+        // Display result
+        if (isPalindrome) {
+            System.out.println("The string \"" + text + "\" is a Palindrome.");
         } else {
-            System.out.println("The word '" + word + "' is NOT a Palindrome.");
+            System.out.println("The string \"" + text + "\" is NOT a Palindrome.");
         }
     }
-}
